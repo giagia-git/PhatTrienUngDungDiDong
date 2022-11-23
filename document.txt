@@ -1,0 +1,70 @@
+Mọi thứ lưu trong biến đều là đối tượng (kể cả số, kể cả null), mọi đối tượng đều sinh ra từ định nghĩa lớp, mọi lớp đều kế thừa từ lớp cơ sở có tên Object (Giống C#)
+ // constructor để nhận data từ widget cha
+ // data nhận được qua constructor là không thể thay đổi (bất biến)
+ Như vậy mỗi Widget đều có 1 BuildContext đại diện cho vị trí của chính Widget đó trên widget tree.
+ Sử dụng Container khi bạn muốn thêm padding, margin, border, màu nền…
+
+ ListView(
+            children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                    border: Border(bottom: BorderSide(color: Colors.grey))
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      child: Icon(Icons.add)
+                    ),
+                    Container(
+                      child: Column(
+                        children: <Widget>[
+                          Text("Zalo bao mat"),
+                          Text("Yeu cau ma kich hoat")
+                        ]
+                      )
+                    ),
+                    Container(
+                      child: Column(
+                        children: <Widget>[
+                          Text("26 phut"),
+                          Text("N")
+                        ]
+                      )
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    border: Border(bottom: BorderSide(color: Colors.black))
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      child: Icon(Icons.add)
+                    ),
+                    Container(
+                      child: Column(
+                        children: <Widget>[
+                          Text("Zalo bao mat"),
+                          Text("Yeu cau ma kich hoat")
+                        ]
+                      )
+                    ),
+                    Container(
+                      child: Column(
+                        children: <Widget>[
+                          Text("26 phut"),
+                          Text("N")
+                        ]
+                      )
+                    )
+                  ],
+                ),
+              ),
+            ]
+          ),
